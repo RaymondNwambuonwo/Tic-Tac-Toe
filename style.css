@@ -7,12 +7,19 @@
      display: grid;
      grid-template-columns: repeat(3, 20fr);
      grid-template-rows: repeat(3, 200px);
+     cursor: pointer;
 }
+
+
 
 .wrapper > div {
     border: 2px solid;
     border-radius: 5px;
     background-color: white; 
     padding: 1em;
-/*     color: #d9480f; */
+    
 }
+
+/* .wrapper:hover {
+    background-color: greenyellow;
+} */

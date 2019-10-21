@@ -3,6 +3,7 @@ console.log(boxTings)
 let player1 = "red"
 let player2 = "blue"
 let counter1 = 9
+var mark = 'X';
 
 for (let i = 0; i < boxTings.length; i++) {
     boxTings[i].style.backgroundColor = 'white'
@@ -20,4 +21,14 @@ for (let i = 0; i < boxTings.length; i++) {
     })
 }
 
-
+function reset(){
+    for (var i=0; i<boxTings.length; i++){
+      boxTings[i].style.backgroundColor = 'white';
+    }
+  }
+  
+  var resetButton = document.getElementById('reset');
+  resetButton.addEventListener('click', function(e){
+    e.preventDefault();
+    reset();
+  });
