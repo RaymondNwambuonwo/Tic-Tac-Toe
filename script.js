@@ -1,7 +1,5 @@
 let boxTings = document.querySelectorAll('.item')
 console.log(boxTings)
-// let player1 = "red"
-// let player2 = "blue"
 let counter1 = 0
 const box1 = document.querySelector("#item1")
 const box2 = document.querySelector("#item2")
@@ -14,21 +12,6 @@ const box8 = document.querySelector("#item8")
 const box9 = document.querySelector("#item9")
 let ptag = document.querySelector(".ptag")
 
-// for (let i = 0; i < boxTings.length; i++) {
-//     boxTings[i].style.backgroundColor = 'white'
-//     boxTings[i].addEventListener("click", function (e){
-//         e.preventDefault();
-//         if (e.target.style.backgroundColor === "white") {
-//         if (counter1 % 2 === 1) {
-//              boxTings[i].style.backgroundColor = "red"
-//              counter1 += 1
-//         } else {
-//             boxTings[i].style.backgroundColor = "blue"
-//             counter1 += 1
-//         }
-//     }
-//     })
-// }
 
 
 for (let i = 0; i < boxTings.length; i++) {
@@ -41,26 +24,18 @@ for (let i = 0; i < boxTings.length; i++) {
         if (counter1 % 2 === 1) {
             evt.target.style.backgroundColor = "red"
             counter1 += 1
+            console.log( evt + "This is click" + counter1)
             ptag.innerText = ("It's player1's turn")
         }
         else if (counter1 % 2 === 0) {
             evt.target.style.backgroundColor = "blue"
             counter1 += 1
+            console.log( evt + "This is click" + counter1)
             ptag.innerText = ("It's player2's turn")
         }
+        setTimeout(winGame, 100)
 })
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -97,15 +72,22 @@ function winGame() {
     (box2.style.backgroundColor==="red" && box5.style.backgroundColor==="red" && box8.style.backgroundColor==="red")||
     (box3.style.backgroundColor==="red" && box6.style.backgroundColor==="red" && box9.style.backgroundColor==="red")){
      alert("Hereee Comessssss Redddddddd!!!!")
-     for (let h = 0; h < boxTings.length; h++){
+     for (let z = 0; z < boxTings.length; z++){
         boxTings[z].style.backgroundColor = "white"
         }
     }
-     else if (click === 9){
+    else if (counter1 === 10){
         alert("There has been a tie")
-        for (let j = 0; j < boxTings.length; j++) {
-        boxTings[j].style.backgroundColor = "white"
+        console.log(counter1)
+        for (let z = 0; z < boxTings.length; z++) {
+        boxTings[z].style.backgroundColor = "white"
         }
     }
+    // else if (counter1 === 9){
+    //     alert("There has been a tie")
+    //     for (let z = 0; z < boxTings.length; z++) {
+    //     boxTings[z].style.backgroundColor = "white"
+    //     }
+    // }
 }
 
