@@ -109,7 +109,8 @@ function winGame() {
     for (let z = 0; z < boxTings.length; z++) {
       boxTings[z].style.backgroundColor = "white";
     }
-  } else if (counter1 === 9) {
+  }
+  if (counter1 === 9) {
     alert("There has been a tie");
     ptag.innerText = "";
     for (let z = 0; z < boxTings.length; z++) {
